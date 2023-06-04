@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:wght@300&display=swap');
 .bg-img{
   width: 100%;
   position: fixed;
@@ -7,7 +8,6 @@
 
 .main-body-head{
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
   min-height: 100vh;
@@ -82,20 +82,72 @@ input::placeholder{
   gap: 5px;
   flex-wrap: wrap;  
 }
-
-@media screen and (max-width:1150px) {
-  .main-body-content{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.nav-lap{
+  height: 100%;
+}
+.nav-mobile{
+  display: none;
 }
 
-@media screen and (max-width:800px) {
-  .bg-img{
+.left-head-mobile{
+  display: none;
+}
+
+@media screen and (max-width:850px) {
+
+  .main-body-content{
+    grid-template-columns: 1fr;
+  }
+  .left-head-mobile{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+  }
+  .row-1-top{
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      padding: 10px;
+      margin: auto;
+  }
+
+  .search-div{
+    margin: auto;
+    width: 95%;
+  }
+
+  .left-head{
     display: none;
   }
-  .top-head{
-    background-color: #6e6e6e;
+  .nav-lap{
+    display: none;
+  }
+  .main-body-head{
+    display: block;
+  }
+  .search-div{
+    width: 80%;
   }
 
+  .navbar-head-app{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-align: center;
+    padding-top:20px;
+    font-size: large;
+    margin: auto 0;
+}
+.connect-button{
+  height: 30px;
+  width: 80px;
+  font-size: medium;
+  margin-bottom: 0;
+}
 
+.bg-img{
+  display: none;
+}
+.top-head{
+  background-color: grey;
+  min-height: max-content;
+}
 }

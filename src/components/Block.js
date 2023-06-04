@@ -3,23 +3,8 @@ import {FaDollarSign} from "react-icons/fa";
 import {AiOutlineInfoCircle} from "react-icons/ai";
 import ATP from "./ApiTemplate";
 import {RxCube} from "react-icons/rx";
-import { useEffect, useState } from "react";
 
 function Block({pair, ind}) {
-
-    const [val, setVal] = useState([]);
-
-    useEffect(()=>{
-        function updateval(){
-            if (pair.length>0){
-                val.push(pair.baseToken.name);
-                val.push(pair.quoteToken.name);
-                val.push("#780");
-                console.log(val);
-            }
-        }   
-        updateval();
-    }, [pair]);
 
   return (
     <div className="block-container">
@@ -27,12 +12,6 @@ function Block({pair, ind}) {
             <div className="block-head">
                 {ATP[ind][0]}
             </div>
-            {/* <div className="head-val">
-                {ATP[ind].length>1 &&val.length>0?<><p className="content-key-val">{ATP[ind][1]}</p><p className="content-key-val">{val[0]}</p></>:null}
-                {ATP[ind].length>2 &&val.length>0?<><p className="content-key-val">{ATP[ind][2]}</p><p className="content-key-val">{val[1]}</p></>:null}
-                {ATP[ind].length>3 &&val.length>0?<><p className="content-key-val">{ATP[ind][3]}</p><p className="content-key-val">{val[2]}</p></>:null}
-                {ATP[ind].length>4 &&val.length>0?<><p className="content-key-val">{ATP[ind][4]}</p><p className="content-key-val">{val[3]}</p></>:null}
-            </div> */}
 
             <div className="head-val">
                         {(() => {
@@ -73,11 +52,6 @@ function Block({pair, ind}) {
                             }
                         })()}
 
-
-                {/* {ATP[ind].length>1 &&val.length>0?<><p className="content-key-val">{ATP[ind][1]}</p><p className="content-key-val">{val[0]}</p></>:null}
-                {ATP[ind].length>2 &&val.length>0?<><p className="content-key-val">{ATP[ind][2]}</p><p className="content-key-val">{val[1]}</p></>:null}
-                {ATP[ind].length>3 &&val.length>0?<><p className="content-key-val">{ATP[ind][3]}</p><p className="content-key-val">{val[2]}</p></>:null}
-                {ATP[ind].length>4 &&val.length>0?<><p className="content-key-val">{ATP[ind][4]}</p><p className="content-key-val">{val[3]}</p></>:null} */}
             </div>
 
 
