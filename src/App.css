@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.bg-img{
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-body-head{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
   min-height: 100vh;
+}
+h2{
+  color: white;
+  margin: 60px 0px 10px 40px;
+}
+.search-div{
+  width: 30%;
+  margin-left: 3%;
+  border: 2px solid white;
+  height: 45px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer{
+  height: 60px;
+  width: 100%;
+  background-color: #f30050;
+}
+.searchbox{
+  border: none;
+  color: white;
+  width: 80%;
+  height: 100%;
+  background:transparent;
+  border-radius: 20px;
+  color: white;
+  padding-left: 3%;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+input:focus{
+  outline: none;
+}
+input::placeholder{
+  color: white;
+  font-weight: 600;
+}
+.left-head{
+  display: flex;
+  margin-top: 3%;
+  justify-content: space-between;
+}
+
+.connect-button{
+  height: 100%;
+  margin: auto 50px;
+  color: white;
+  /* background-color: #711043; */
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #7b0f36 0%, #6c104a 51%, #5d115e 100%);
+  width: 14%;
+  font-size: large;
+  border: transparent;
+}
+
+.main-body{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-body-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 20px 40px;
+  gap: 5px;
+  flex-wrap: wrap;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:1150px) {
+  .main-body-content{
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:800px) {
+  .bg-img{
+    display: none;
   }
+  .top-head{
+    background-color: #6e6e6e;
+  }
+
+
 }
